@@ -5,7 +5,11 @@ import pandas as pd
 
 # Carregar dados
 # Substitua 'caminho/do/arquivo.csv' pelo caminho real do seu arquivo CSV
-dados = pd.read_csv('/home/guilherme/VideoGamesSales.csv')
+#dados = pd.read_csv('/home/guilherme/VideoGamesSales.csv')
+
+url='https://drive.google.com/file/d/1cMAbZ5kLKkN3jnwY-yghDAHr4P6tQ9L3/view?usp=sharing'
+url='https://drive.google.com/uc?id=' + url.split('/')[-2]
+dados = pd.read_csv(url)
 
 # Iniciar o aplicativo Dash
 app = Dash(__name__)
